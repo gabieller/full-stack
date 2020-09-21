@@ -3,23 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 01</title>
+    <title>RBG Simulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Sistema RGB</h1>
-    <p>(R) Vermelho: </p>
-    <input id = 'rangeRed' type="range" min = 0 max = 255 /> <!--Range 1 -->
-    <input id = 'textRed' type="text" disabled='disabled'/> <!--Texto desabilidado -->
+    <h1>RGB Simulator</h1>
+    <div class = 'slider'>
+        <label class = "slider">
+           <span>(R) Red</span> 
+            <input 
+                type="range" 
+                id = "sliderRed"  
+                name="sliderRed" 
+                min = '0' 
+                max = '255' 
+            /> 
+    </label>
+        <input 
+            type="text" 
+            id = "textRed"
+            value="0"
+            disabled
+        /> 
+    </div>
 
-    <p> (G) Verde: </p>
-    <input id = 'rangeGreen' type="range" min = 0 max = 255 /> <!--Range 2 -->
-    <input id = 'textGreen' type="text" disabled='disabled'/> <!--Texto desabilidado -->
+    <div class = 'slider'>
+        <label class = "slider">
+            <span>(G) Green </span>    
+            <input 
+                type="range" 
+                id = 'sliderGreen' 
+                name="sliderGreen" 
+                min = '0' 
+                max = '255'  
+            /> 
+    </label>  
 
-    <p>(B) Blue: </p>
-    <input id = 'rangeBlue'type="range" min = 0 max = 255 /> <!--Range 3 -->
-    <input id = 'textBlue' type="text" disabled='disabled'/> <!--Texto desabilidado -->
+        <input 
+            id = 'textGreen' 
+            type="text" 
+            value="0"
+            disabled
+            />
+    </div>
 
+    <div class = 'slider'>
+        <label class = "slider"> 
+            <span>(B)Blue</span> 
+            <input 
+                type="range" 
+                id = 'sliderBlue'
+                name="sliderBlue" 
+                min = '0' 
+                max = '255' 
+            /> 
+        </label> 
+
+        <input 
+            id = 'textBlue' 
+            type="text" 
+            value="0"
+            disabled
+        />
+    </div>
+
+    <div id = "square" ></div> <!--Para criar o quadrado no CSS-->
+
+    <script src = "script.js"></script>
     
 </body>
 </html>
